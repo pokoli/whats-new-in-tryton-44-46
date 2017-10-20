@@ -1,0 +1,343 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>What's new on Tryton 4.4 and 4.6</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h1>What's new on 4.4 and 4.6?</h1>
+                    <img src="img/new-version.jpg">
+                    <p>Available on: <a target="_blank"
+                        href="http://pokoli.github.io/whats-new-on-tryton-44-46/">
+                        http://pokoli.github.io/whats-new-on-tryton-44-46/</a></p>
+                </section>
+				<section>
+                    <h2> Who am I?</h2>
+                    <h3 class="fragment enfassis">
+                        Sergi Almacellas Abellana</h3>
+                    <ul>
+                        <li class="fragment">(Python &hearts;) Programmer</li>
+                        <li class="fragment">Open source enthusiast</li>
+                        <li class="fragment">Tryton commiter since Nov 2013
+                        </li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>Release Process</h2>
+                    <ul>
+                        <li class="fragment">New Release <span class="enfassis">every 6 months</span></li>
+                        <li class="fragment">First Release November 2008</span></li>
+                        <li class="fragment">Release 4.6: 30th October 2017</li>
+                        </li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>Spoiler</h2>
+                    <img class="fragment" src="img/mature.jpg"/>
+                </section>
+				<section>
+                    <h2>User Interface</h2>
+                    <div class="fragment">
+                        <h4 class="enfassis">Toolbar</h4>
+                        <img src="img/toolbar_before.png"/>
+                    </div>
+                    <div class="fragment">
+                        <h4 class="enfassis">Now</h4>
+                        <img src="img/toolbar_now.png"/>
+                    </div>
+                </section>
+				<section>
+                    <h2>User Interface</h2>
+                    <div>
+                        <h4 class="enfassis">Options disabled by access rights</h4>
+                        <img src="img/menu_access.png"/>
+                    </div>
+                </section>
+				<section>
+                    <h2>User Interface</h2>
+                    <div>
+                        <h4 class="enfassis">Tree views</h4>
+                        <img src="img/tree.png"/>
+                        <img src="img/editable_tree.png"/>
+                        <p class="fragment">Same <span class="enfassis">alignment</span> on headers</p>
+                    </div>
+                </section>
+				<section>
+                    <h2>User Interface</h2>
+                    <div>
+                        <h4 class="enfassis">Binary Widget</h4>
+                        <img src="img/binary_empty.png"/>
+                        <img src="img/binary_filled.png"/>
+                        <img src="img/binary_form.png"/>
+                    </div>
+                    <p class="fragment">Only <span class="enfassis">relevant</span> buttons are shown</p>
+                </section>
+				<section>
+                    <h2>Web Client</h2>
+                    <ul>
+                        <li class="fragment"><span class="enfassis">Same</span> features as other client</li>
+                        <li class="fragment">Keyboard shortcuts</li>
+                        <li class="fragment">Leave confirmation</li>
+                        </li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>Product</h2>
+                    <ul>
+                        <li class="fragment">Limit cost method to fixed for service</li>
+                        <li class="fragment">Move cost price from Template to Product</li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>Price List and Commission</h2>
+                    <ul>
+                        <li>Add product category as matching criteria</li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>Accounting</h2>
+                    <div class="fragment">
+                        <h4 class="enfassis">Wizard for creating new fiscalyears</h4>
+                        <img src="img/fiscalyear_renew.png"/>
+                        <p>Configuration is copied from previous fiscalyear</p>
+                    </div>
+                </section>
+				<section>
+                    <h2>Accounting</h2>
+                    <ul>
+                        <li>Definitive lock of fiscalyear/periods</li>
+                        <li class="fragment">Date filters on reports</li>
+                        <li class="fragment">Default expense/revenue account on chart creation</li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>Statement</h2>
+                    <h4 class="enfassis">Import statements from file</h4>
+                    <img src="img/statment_import.png"/>
+                    <p>Create several lines for each origin line</p>
+                </section>
+				<section>
+                    <h2>Analytic account</h2>
+                    <h4 class="enfassis">Rule Engine</h4>
+                    <img src="img/analytic_rule.png"/>
+                </section>
+				<section>
+                    <h2>Sales & Purchases</h2>
+                    <ul>
+                        <li class="fragment">Add cron task to process confirmed</li>
+                        <div class="fragment">
+                            <li>Add price on product view from line</li>
+                            <img src="img/sale_price.png"/>
+                        </div>
+                    </ul>
+                </section>
+				<section>
+                    <h2>Sales</h2>
+                    <ul>
+                        <li class="fragment">Plan backorder moves to today</li>
+                        <li class="fragment">Do not plan moves without delivery date</li>
+                        <li class="fragment">Allow to define the default grouping method</li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>Sale Opportunity</h2>
+                    <ul>
+                        <li>Make Opportunity employee not required on leads</li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>Purchases</h2>
+                    <ul>
+                        <li class="fragment">Do not plan backorder moves</li>
+                        <div class="fragment">
+                            <li>Allow to edit delivery date on purchase line</li>
+                            <img src="img/delivery_date.png"/>
+                            <img src="img/delivery_date_modify.png"/>
+                        </div>
+                        <li class="fragment">Add requests on purchase line</li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>Stock</h2>
+                    <ul>
+                        <li class="fragment">Same picking and output location</li>
+                        <li class="fragment">Set employee on shipments</li>
+                        <li class="fragment">Allow to deactivate only empty locations</li>
+                        <li class="fragment">Add flat children option on location</li>
+                        <li class="fragment">Allow to set manual effective date on move</li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>Stock</h2>
+                    <ul>
+                        <li>Allow to split shipments</li>
+                        <li class="fragment">Generate request internal shipments recursively</li>
+                        <li class="fragment">Merge supply into one wizard</li>
+                        <li class="fragment">Manage overflowing quantities on supply</li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>Production</h2>
+                    <ul>
+                        <li>Add producible to product template</li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>New modules</h2>
+                    <div class="fragment">
+                        <h4 class="enfassis">Invoice correction</h4>
+                        <img src="img/account_invoice_correction.png"/>
+                    </div>
+                </section>
+				<section>
+                    <h2>New modules</h2>
+                    <img src="img/stripe.jpg"/>
+                </section>
+				<section>
+                    <h2>New modules</h2>
+                    <h4 class="enfassis">Price List Dates</h4>
+                    <img src="img/product_price_list_date.png"/>
+                </section>
+				<section>
+                    <h2>New modules</h2>
+                    <h4 class="enfassis">Shipment measurements</h4>
+                    <ul>
+                        <li class="fragment">Move weight and volume</li>
+                        <li class="fragment">Sumed on shipment and packages</li>
+                        <li class="fragment">Sent to carrier services</li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>New modules</h2>
+                    <h4 class="enfassis">Sale advance payment</h4>
+                    <ul>
+                        <li class="fragment">Define advance mayment Term</li>
+                        <li class="fragment">Advancement invoice</li>
+                        <li class="fragment">Block shipment</li>
+                        <li class="fragment">Block supply</li>
+                        <li class="fragment">Final invoices - Advancement amount</li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>New modules</h2>
+                    <h4 class="enfassis">Subscriptions</h4>
+                    <ul>
+                        <li class="fragment">Define services</li>
+                        <li class="fragment">Define recurrences</li>
+                        <li class="fragment">Subscritions</li>
+                        <li class="fragment">Generate recurring invoices</li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>New modules</h2>
+                    <h4 class="enfassis">Notification emails</h4>
+                    <ul>
+                        <li class="fragment">Report Engine</li>
+                        <li class="fragment">Based on Triggers</li>
+                        <li class="fragment">Transactional</li>
+                        <li class="fragment">Notification Log</li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>New modules</h2>
+                    <h4 class="enfassis">Dunning Email</h4>
+                    <img src="img/account_dunning_email.png"/>
+                </section>
+				<section>
+                    <h2>New modules</h2>
+                    <h4 class="enfassis">Stock Location Move</h4>
+                    <ul>
+                        <li class="fragment">Can be used to track pallets</li>
+                        <li class="fragment">Movable with internal shipments</li>
+                        <li class="fragment">Deactivated when empty</li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>New modules</h2>
+                    <h4 class="enfassis">Sale Payment</h4>
+                    <ul>
+                        <li class="fragment">Add payment before confirmation</li>
+                        <li class="fragment">Sale is confirmed when paid</li>
+                        <li class="fragment">Invoice reconciliation</li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>New modules</h2>
+                    <h4 class="enfassis">Sale Shipment Tolerance</h4>
+                    <ul>
+                        <li class="fragment">Sets upper/lower tolerance margins</li>
+                        <li class="fragment">Warning for overshipment</li>
+                        <li class="fragment">No new shiment for lower shipment</li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>New modules</h2>
+                    <h4 class="enfassis">European localization</h4>
+                    <ul>
+                        <li class="fragment">Shared on all European countries</li>
+                        <li class="fragment">EC Sales List</li>
+                        <li class="fragment">Probably more to come</li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>New modules</h2>
+                    <div class="fragment">
+                        <h4 class="enfassis">Spanish Chart of Accounts</h4>
+                        <img src="img/account_es.png"/>
+                    </div>
+                </section>
+				<section>
+                    <img src="img/thats-all.jpg"/>
+                </section>
+				<section>
+                    <h1>Thank you!</h1>
+                    <p>The presentation code is avaiable on </p>
+                    <p><a target="_blank"
+                        href="http://github.com/pokoli/whats-new-in-tryton-44-46/">
+                        http://github.com/pokoli/whats-new-in-tryton-44-46/
+                    </a></p>
+                    <h1 class="fragment">Questions?</h1>
+                </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
